@@ -41,10 +41,10 @@ while running:
     c += 1
     for event in pygame.event.get():
 
-        if event.type == pygame.QUIT: # Close screen/game
+        if event.type == pygame.QUIT:
             running = False
             
-        elif event.type == pygame.KEYDOWN: # Button pressed
+        elif event.type == pygame.KEYDOWN:
             
             key_name = pygame.key.name(event.key)            
             
@@ -77,7 +77,7 @@ while running:
                 erasing = False
             elif event.key == pygame.K_LSHIFT or event.key == pygame.K_RSHIFT:
                 capsLock = not capsLock
-        #elif event.type == pygame.MOUSEBUTTONDOWN:
+        
     if erasing:
         if c % tempDelay == 0:
             tempDelay = max(tempDelay - 5000, 10000)
